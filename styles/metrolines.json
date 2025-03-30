@@ -1,0 +1,38 @@
+{
+"layers": [
+    {
+        "id": "metro_lines",
+        "type": "line",
+        "source": "map-tiles",
+        "source-layer": "OSM_ROADS_JAIPUR1",
+        "filter": [
+          "any",
+          ["==", ["get", "color"], "green"],
+          ["==", ["get", "color"], "line"]
+        ],
+        "layout": {  
+          "line-join": [
+            "case",
+            ["==", ["get", "color"], "green"], "round",
+            ["==", ["get", "color"], "line"], "round",
+            "miter" 
+          ]
+        },
+        "paint": {
+            "line-color": [
+              "case",
+              ["==", ["get", "color"], "green"], "#029a29",  
+              ["==", ["get", "color"], "line"], "#545454",   
+              "#000000"  
+            ],
+            "line-width": [
+              "case",
+              ["==", ["get", "color"], "green"], 5,
+              ["==", ["get", "color"], "line"], 5,
+              1  
+            ]
+      }
+    }
+    ]
+  }
+  

@@ -1,0 +1,38 @@
+{
+    "layers": [
+      {
+        "id": "bfp",
+        "type": "fill",
+        "source": "map-tiles",  
+        "source-layer": "BFP_LITE_V1_14",  
+        "minzoom": 12,
+        "maxzoom": 24,
+        "paint": {
+          "fill-color": [
+            "step",
+            ["zoom"],
+            "#ded7d3",
+            70, "#ded7d3",
+            141, "#e5dfdb",
+            282, "#e5dfdb",
+            564, "#e5e4df",
+            1128, "#e5e4df",
+            2256, "#e5e4df"
+          ],
+          "fill-outline-color": [
+            "step",
+            ["zoom"],
+            "#ac9c92",
+            70, "#aaa27b",
+            141, "#b1aa86",
+            282, "#b8b192",
+            564, "#bfb89d",
+            1128, "#c6bfa8",
+            2256, "#cdc6b4"
+          ],
+          "fill-opacity": 1
+        }
+      }
+    ]
+  }
+  

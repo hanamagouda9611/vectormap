@@ -1,0 +1,112 @@
+.geocoder {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    width: 300px;
+}
+
+.search-bar {
+    position: absolute;
+    top: 8px;
+    left: 50px;
+    z-index: 2;
+    width: 500px;
+    /* Increased width */
+    padding: 2px;
+    border-radius: 12px;
+    /* Curved border */
+    border: 1px solid #007bff;
+    /* Border color */
+    background-color: white;
+    /* Background color */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    /* Halo effect */
+}
+
+.search-bar input[type="text"] {
+    width: calc(100% - 140px);
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#search {
+    width: 60px;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-left: 10px;
+}
+
+#clear {
+    width: 30px;
+    padding: 6px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: none;
+    color: black;
+    margin-left: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#search:hover, #clear:hover {
+    background-color: #0056b3; 
+    color: white;
+}
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.suggestions-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    z-index: 1000;
+}
+
+.suggestion-item {
+    padding: 4px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;     /* Vertically center the text */
+    text-align: center;
+    min-height: 20px;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+.suggestions-container div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestions-container div:hover {
+    background-color: #f0f0f0;
+}
+
+#suggestions-list {
+    max-height: 250px; /* Adjust the height according to the size of each suggestion item */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Optional: Add a border to the suggestion box */
+    padding: 1px;
+    display: none; 
+  }

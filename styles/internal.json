@@ -1,0 +1,53 @@
+{
+  "layers": [
+    {
+      "id": "internal_roads_footway",
+      "type": "line",
+      "source": "map-tiles",
+      "source-layer": "INTERNAL_ROADS_LITE_V1_14",
+      "minzoom": 18,
+      "maxzoom": 24,
+      "filter": ["in", "highway", "footway","Footway"],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#c74347",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          18, 1
+        ],
+        "line-dasharray": [2, 5]  
+      }
+    },
+    {
+      "id": "internal_roads_service",
+      "type": "line",
+      "source": "map-tiles",
+      "source-layer": "INTERNAL_ROADS_LITE_V1_14",
+      "minzoom": 15,
+      "maxzoom": 24,
+      "filter": ["in", "highway","service","Service"],
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#bccfe3",
+        "line-width": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          15, 6,
+          16, 7,
+          17, 8,
+          18, 10
+        ]
+       
+      }
+    }
+  ]
+}

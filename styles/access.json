@@ -1,0 +1,20 @@
+{
+    "layers": [
+        {
+            "id": "access_points",
+            "type": "symbol",
+            "source": "map-tiles",
+            "source-layer": "ACCESS_POINTS_LITE_V1_14",
+            "filter": ["==", "$type", "Point"],
+            "minzoom": 18,
+            "maxzoom": 24,
+            "layout": {
+                "icon-image": "Entrance",  
+                "icon-size": 0.05,
+                "icon-allow-overlap": true,
+                "icon-anchor": "center",
+                "icon-offset": [0, 0]
+            }
+        }
+    ]
+}

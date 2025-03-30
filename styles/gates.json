@@ -1,0 +1,20 @@
+{
+    "layers": [
+        {
+            "id": "gates",
+            "type": "symbol",
+            "source": "map-tiles",
+            "source-layer": "GATES_LITE_V1_14",
+            "filter": ["==", "$type", "Point"],
+            "minzoom": 18,
+            "maxzoom": 24,
+            "layout": {
+                "icon-image": "barrier",  
+                "icon-size": 0.02,
+                "icon-allow-overlap": true,
+                "icon-anchor": "center",
+                "icon-offset": [0, 0]
+            }
+        }
+    ]
+}

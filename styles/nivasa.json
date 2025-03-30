@@ -1,0 +1,27 @@
+{
+    "layers": [
+      {
+        "id": "nivasa",
+        "type": "symbol",
+        "source": "map-tiles",
+        "source-layer": "DEDUCE_NIVASA_LITE_V1_2",
+        "minzoom": 18,
+        "maxzoom": 24,
+        "layout": {
+          "text-field": ["get", "HNO"],
+          "text-font": ["Arial Unicode MS Bold"],
+          "text-size": 8,
+          "text-anchor": "center",
+          "symbol-avoid-edges": true,
+          "symbol-placement": "point",
+          "text-optional": true,
+          "text-padding": 1,
+          "text-max-width": 1
+        },
+        "paint": {
+          "text-color": "#000000"
+        }
+      }
+    ]
+  }
+  

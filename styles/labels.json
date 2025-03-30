@@ -1,0 +1,356 @@
+{
+    "layers": [
+      {
+        "id": "country_labels",
+        "type": "symbol",
+        "source": "map-tiles",
+        "source-layer": "COUNTRY_BOUNDARY_V1_1_POINTS",
+        "filter": ["==", "$type", "Point"],
+        "minzoom": 3,
+        "maxzoom": 4,
+        "layout": {
+            "text-field": ["get", "STATE"],
+            "text-size": 12,
+            "text-font": ["Arial Unicode MS Bold"],
+            "text-variable-anchor": ["center"], 
+            "text-allow-overlap": false,
+            "text-offset": [0, 0]
+        },
+        "paint": {
+            "text-color": "#656565" 
+        }
+      },
+      {
+        "id": "state_labels",
+        "type": "symbol",
+        "source": "map-tiles",
+        "source-layer": "STATE_BOUNDARY_V1_1_POINTS",
+        "minzoom": 4,
+        "maxzoom": 7,
+        "filter": [
+          "all",
+          ["==", "$type", "Point"]
+        ],
+        "layout": {
+          "text-field": ["get", "STATE"],
+          "text-font": ["Arial Unicode MS Bold"],
+          "text-size": {
+            "stops": [[4, 8], [8, 12]]
+          },
+          "visibility": "visible",
+          "text-variable-anchor": ["top"], 
+          "text-transform": "uppercase",
+          "symbol-z-order": "source",
+          "symbol-avoid-edges": false,
+          "text-padding": 5,
+          "text-allow-overlap": false,
+          "text-ignore-placement": false,
+          "text-max-width": 10,
+          "text-optional": false
+          
+        },
+        "paint": {
+          "text-color": "#000000",
+          "text-halo-blur": 0,
+          "text-halo-color": "hsla(0, 0%, 100%, 0.75)",
+          "text-halo-width": 2
+        }
+      },
+      {
+        "id": "dist_labels",
+        "type": "symbol",
+        "source": "map-tiles",
+        "source-layer": "DISTRICT_BOUNDARY_V1_1_POINTS",
+        "minzoom": 7,
+        "maxzoom": 9,
+        "filter": [
+          "all",
+          ["==", "$type", "Point"]
+        ],
+        "layout": {
+          "text-field": ["get", "District"],
+          "text-font": ["Arial Unicode MS Bold"],
+          "text-size": {
+            "stops": [[7, 8], [9, 10]]
+          },
+          "visibility": "visible",
+          "text-variable-anchor": ["center"], 
+          "text-transform": "uppercase",
+          "symbol-z-order": "source",
+          "symbol-avoid-edges": false,
+          "text-padding": 5,
+          "text-allow-overlap": false,
+          "text-ignore-placement": false,
+          "text-max-width": 10,
+          "text-optional": false
+        },
+        "paint": {
+          "text-color": "#000000",
+          "text-halo-blur": 0,
+          "text-halo-color": "hsla(0, 0%, 100%, 0.75)",
+          "text-halo-width": 2
+        }
+    },
+    {
+      "id": "sub_dist_labels",
+      "type": "symbol",
+      "source": "map-tiles",
+      "source-layer": "TALUKA_BOUNDARY_V1_1_POINTS",
+      "minzoom": 9,
+      "maxzoom": 12,
+      "filter": [
+        "all",
+        ["==", "$type", "Point"]
+      ],
+      "layout": {
+        "text-field": ["get", "TEHSIL"],
+        "text-font": ["Arial Unicode MS Bold"],
+        "text-size": {
+          "stops": [[9, 8], [11, 10]]
+        },
+        "visibility": "visible",
+        "text-variable-anchor": ["center"], 
+        "text-transform": "uppercase",
+        "symbol-z-order": "source",
+        "symbol-avoid-edges": false,
+        "text-padding": 5,
+        "text-allow-overlap": false,
+        "text-ignore-placement": false,
+        "text-max-width": 10,
+        "text-optional": false
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-blur": 0,
+        "text-halo-color": "hsla(0, 0%, 100%, 0.75)",
+        "text-halo-width": 2
+      }
+  },
+  {
+    "id": "locality_labels",
+    "type": "symbol",
+    "source": "map-tiles",
+    "source-layer": "LOCALITY_BOUNDARY_V1_4_POINTS",
+    "filter": ["==", "$type", "Point"],
+    "minzoom": 11,
+    "maxzoom": 17,
+    "layout": {
+        "text-field": ["get", "LOCALITY"],
+        "text-font": ["Arial Unicode MS Bold"],
+        "text-size": {
+          "stops": [[11, 6], [12, 8]]
+        },
+        "visibility": "visible",
+        "text-variable-anchor": ["center"], 
+        "text-transform": "uppercase",
+        "symbol-z-order": "source",
+        "symbol-avoid-edges": false,
+        "text-padding": 5,
+        "text-allow-overlap": false,
+        "text-ignore-placement": false,
+        "text-max-width": 10,
+        "text-optional": false
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-blur": 0,
+        "text-halo-color": "hsla(0, 0%, 100%, 0.75)",
+        "text-halo-width": 1
+      }
+  },
+  {
+    "id": "bindu_labels",
+    "type": "symbol",
+    "source": "map-tiles",
+    "source-layer": "DEDUCE_BINDU_LITE_V1_6",
+    "filter": ["==", "$type", "Point"],
+    "minzoom": 18,
+    "maxzoom": 24,
+    "layout": {
+      "text-field": ["get", "POI_NAME"],
+      "text-size": 8,
+      "text-font": ["Arial Unicode MS Bold"], 
+      "text-variable-anchor": ["left", "right", "top-left", "top-right", "bottom-left", "bottom-right"],
+      "symbol-placement": "point",
+      "text-allow-overlap": false,
+      "text-padding": 5, 
+      "text-justify": "left",  
+      "text-offset": [2, 0]
+    },
+    "paint": {
+      "text-color": "#000000" 
+    }
+  }, 
+  {
+        "id": "road_labels",
+        "type": "symbol",
+        "source": "map-tiles",
+        "source-layer": "DEDUCE_INDIA_ROADS_V1_1",
+        "minzoom": 12,
+        "maxzoom": 24,
+        "layout": {
+            "text-field": ["get", "name"],
+            "text-size": ["interpolate", ["linear"], ["zoom"], 
+                          12, 4,
+                          13, 5,
+                          14, 6,  
+                          15, 8,  
+                          16, 10,
+                          17, 12 ], 
+            "text-font": ["Arial Unicode MS Bold"],
+            "text-variable-anchor": ["center"], 
+            "symbol-placement": "line", 
+            "text-allow-overlap": false,
+            "text-padding": 5,  
+            "text-offset": [0, 0],
+            "text-pitch-alignment": "viewport",
+            "text-rotation-alignment": "map",
+            "symbol-spacing": 450  
+        },
+        "paint": {
+            "text-color": "#000000"
+        }
+      },
+  {
+        "id": "internal_roads_labels",
+        "type": "symbol",
+        "source": "map-tiles",
+        "source-layer": "INTERNAL_ROADS_LITE_V1_14",
+        "filter": ["==", "$type", "Point"],
+        "minzoom": 15,
+        "maxzoom": 24,
+        "layout": {
+          "text-field": ["get", "name"],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 
+                          15, 6,
+                          16, 8,  
+                          17, 10,  
+                          18, 12 ], 
+            "text-font": ["Arial Unicode MS Bold"],
+            "text-variable-anchor": ["center"], 
+            "symbol-placement": "line", 
+            "text-allow-overlap": false,
+            "text-padding": 5,  
+            "text-offset": [0, 0],
+            "text-pitch-alignment": "viewport",
+            "text-rotation-alignment": "map",
+            "symbol-spacing": 450  
+        },
+        "paint": {
+          "text-color": "#000000",
+          "text-halo-color": "#FFFFFF",
+          "text-halo-width": 1
+        }
+  },
+  
+        {
+          "id": "akshara_labels",
+          "type": "symbol",
+          "source": "map-tiles",
+          "source-layer": "DEDUCE_AKSHARA_LITE_V1_6_POINTS",
+          "filter": ["==", "$type", "Point"],
+          "minzoom": 15,
+          "maxzoom": 24,
+          "layout": {
+            "text-field": ["get", "AKS_NAME"],
+            "text-size": ["interpolate", ["linear"], ["zoom"],  
+                15, 6,
+                16, 8,
+                17, 10 ], 
+            "text-font": ["Arial Unicode MS Bold"], 
+            "text-variable-anchor": ["center"], 
+            "symbol-placement": "point",
+            "text-allow-overlap": false,
+            "text-padding": 5, 
+            "text-offset": [1, 0]
+          },
+          "paint": {
+            "text-color": "#000000" 
+          }
+        },
+    {
+          "id": "gates_labels",
+          "type": "symbol",
+          "source": "map-tiles",
+          "source-layer": "GATES_LITE_V1_14",
+          "filter": ["==", "$type", "Point"],
+          "minzoom": 18,
+          "maxzoom": 24,
+          "layout": {
+              "text-field": ["get", "name"],
+              "text-size": 8,
+              "text-font": ["Arial Unicode MS Bold"], 
+              "text-variable-anchor": ["left", "right", "top-left", "top-right", "bottom-left", "bottom-right"],
+              "symbol-placement": "point",
+              "text-allow-overlap": false,
+              "text-offset": [1, 0]
+          },
+          "paint": {
+              "text-color": "#000000" 
+          }
+      }, 
+      {
+        "id": "gated_lables",
+        "type": "symbol",
+        "source": "map-tiles",
+        "source-layer": "GATED_COMMUNITY_LITE_V1_14",
+        "filter": ["==", "$type", "Polygon"],
+        "minzoom": 18,
+        "maxzoom": 24,
+        "layout": {
+          "text-field": ["get", "name"],
+          "text-size": 8,
+          "text-font": ["Arial Unicode MS Bold"], 
+          "text-variable-anchor": ["left", "right", "top-left", "top-right", "bottom-left", "bottom-right"],
+          "symbol-placement": "point",
+          "text-allow-overlap": false
+        },
+        "paint": {
+          "text-color": "#000000" 
+        }
+      },  
+      {
+          "id": "road_entry_labels",
+          "type": "symbol",
+          "source": "map-tiles",
+          "source-layer": "ROAD_ENTRY_LITE_V1_14",
+          "filter": ["==", "$type", "Point"],
+          "minzoom": 18,
+          "maxzoom": 24,
+          "layout": {
+              "text-field": ["get", "amenity"],
+              "text-size": 8,
+              "text-font": ["Arial Unicode MS Bold"], 
+              "text-variable-anchor": ["left", "right", "top-left", "top-right", "bottom-left", "bottom-right"],
+              "symbol-placement": "point",
+              "text-allow-overlap": false,
+              "text-offset": [1, 0]
+          },
+          "paint": {
+              "text-color": "#000000" 
+          }
+      },
+      {
+            "id": "access_points_labels",
+            "type": "symbol",
+            "source": "map-tiles",
+            "source-layer": "ACCESS_POINTS_LITE_V1_14",
+            "filter": ["==", "$type", "Point"],
+            "minzoom": 18,
+            "maxzoom": 24,
+            "layout": {
+                "text-field": ["get", "name"],
+                "text-size": 8,
+                "text-font": ["Arial Unicode MS Bold"], 
+                "text-variable-anchor": ["left", "right", "top-left", "top-right", "bottom-left", "bottom-right"],
+                "symbol-placement": "point",
+                "text-allow-overlap": false,
+                "text-offset": [1, 0]
+            },
+            "paint": {
+                "text-color": "#000000" 
+            }
+        }          
+    ]
+  }
+  

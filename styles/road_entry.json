@@ -1,0 +1,20 @@
+{
+    "layers": [
+        {
+            "id": "road_entry",
+            "type": "symbol",
+            "source": "map-tiles",
+            "source-layer": "ROAD_ENTRY_LITE_V1_14",
+            "minzoom": 18,
+            "maxzoom": 24,
+            "filter": ["==", "$type", "Point"],
+            "layout": {
+                "icon-image": "road",  
+                "icon-size": 0.08,
+                "icon-allow-overlap": true,
+                "icon-anchor": "center",
+                "icon-offset": [0, 0]
+            }
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+    "layers": [
+      {
+        "id": "units-symbol",
+        "type": "circle",
+        "source": "map-tiles",
+        "source-layer": "UNITS_LITE_V1_13",
+        "minzoom": 12,
+        "maxzoom": 24,
+        "paint": {
+          "circle-color": "#487bb6",
+          "circle-stroke-color": "#325780",
+          "circle-stroke-width": 1,
+          "circle-radius": 4
+        }
+      },
+      {
+        "id": "level-label",
+        "type": "symbol",
+        "source": "map-tiles",
+        "source-layer": "UNITS_LITE_V1_13",
+        "minzoom": 18,
+        "maxzoom": 24,
+        "layout": {
+          "text-field": "{level}",
+          "text-font": ["Arial Unicode MS Bold"],
+          "text-size": 10,
+          "text-variable-anchor": ["left"], 
+          "symbol-placement": "point", 
+          "text-allow-overlap": false,
+          "text-padding": 5,  
+          "symbol-spacing": 40,
+          "text-offset": [1, 0],
+          "text-pitch-alignment": "auto",
+          "text-rotation-alignment": "auto"
+        },
+        "paint": {
+          "text-color": "#092585"
+        }
+      },
+      {
+        "id": "housenumbe-label",
+        "type": "symbol",
+        "source": "map-tiles",
+        "source-layer": "UNITS_LITE_V1_13",
+        "minzoom": 18,
+        "maxzoom": 24,
+        "layout": {
+          "text-field": "{housenumbe}",
+          "text-font": ["Arial Unicode MS Bold"],
+          "text-size": 10,
+          "text-variable-anchor": ["left"], 
+          "symbol-placement": "point", 
+          "text-allow-overlap": false,
+          "text-padding": 5,  
+          "symbol-spacing": 40,
+          "text-offset": [1, 0],
+          "text-pitch-alignment": "auto",
+          "text-rotation-alignment": "auto"
+        },
+        "paint": {
+          "text-color": "#092585"
+        }
+      }
+    ]
+  }
+  

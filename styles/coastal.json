@@ -1,0 +1,17 @@
+{
+    "layers": [
+      {
+        "id": "COASTAL_LAND",
+        "type": "fill",
+        "source": "map-tiles",
+        "source-layer": "COASTAL_LAND",
+        "minzoom": 0,
+        "maxzoom": 24,
+        "paint": {
+          "fill-color":"#afdffd",
+          "fill-outline-color": "#afdffd"
+        }
+      }
+    ]
+  }
+  
